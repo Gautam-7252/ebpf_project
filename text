@@ -1,0 +1,7 @@
+clang -O2 -target bpf -I. -c drop_tcp_packets.c -o drop_tcp_packets.o
+
+sudo go run main.go lo 4040
+
+sudo tcpdump -i any port 4040
+
+nc 192.168.1.5 4040
