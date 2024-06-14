@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "tcp.h": "c",
+        "sched.h": "c",
+        "ip.h": "c",
+        "if_ether.h": "c",
+        "bpf.h": "c",
+        "pid.h": "c",
+        "pid_types.h": "c",
+        "byteorder.h": "c"
+    }
+}
