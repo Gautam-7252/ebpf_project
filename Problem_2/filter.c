@@ -52,6 +52,9 @@ int filter(struct __sk_buff *skb) {
 
         if (bpf_ntohs(tcp->dest) == PORT)
             return XDP_PASS;
+        
+        // Log dropped packets for debugging
+        bpf_trace_printk("Dropped packet for process: %s\n", comm);
     }
 
     return XDP_PASS;
